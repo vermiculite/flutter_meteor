@@ -9,5 +9,7 @@ enum STATUS {
 class Status {
   STATUS status;
 
-  Status({this.status = STATUS.connecting, })
+  Status({
+    this.status = STATUS.connecting,
+  });
 }
