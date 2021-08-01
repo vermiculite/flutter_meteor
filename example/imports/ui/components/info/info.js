@@ -3,7 +3,10 @@ import { Meteor } from 'meteor/meteor';
 import './info.html';
 
 Template.info.onCreated(function () {
-  Meteor.subscribe('links.all');
+  const handle = Meteor.subscribe('links.all');
+  Meteor.setTimeout(() => {
+    handle.stop()
+  }, 5000);
 });
 
 Template.info.helpers({

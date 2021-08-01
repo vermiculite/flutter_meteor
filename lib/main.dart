@@ -1,6 +1,10 @@
-import 'package:flutter_meteor/src/ddp/connection.dart';
+import 'package:flutter_meteor/flutter_meteor.dart';
+import 'package:flutter_meteor/src/data/subscription.dart';
 
 void main() {
-  final connection = Connection('ws://localhost:3000/websocket');
-  connection.connect();
+  init();
+  Stream<Subscription> subStream = subscribe(name: 'links.all');
+  subStream.forEach((element) {
+    print(element);
+  });
 }

@@ -7,4 +7,5 @@ homepage:
 environment:
   sdk: ">=2.1.0 <3.0.0"
 dependencies: 
+  uuid: ^3.0.4
   web_socket_channel: ^2.1.0
